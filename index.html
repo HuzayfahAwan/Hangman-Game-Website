@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The name of our website present in the tab -->
+  <title>Hangman</title>
+<!-- Our icon that will be present in the tab next to the website's name -->
+  <link rel="icon" href="icon.png" type="image/x-icon">
+<!-- Linking both the style.css file and Bulma documentation, in case we want to add our own CSS and Bulma's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"/>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+  
+  <section id="body" class="hero is-black is-fullheight">
+    
+    <!-- The navbar at the top -->
+    <div class="hero-head">
+      <header class="navbar is-justify-content-space-between">
+        <div id="navtextdiv" class="is-flex is-justify-content-flex-start navbar-brand">
+          <a href="index.html">
+            <h1 id="navtext">Hangman</h1>
+          </a>
+        </div>
+        <div id="flippingalphabet" class="is-flex is-justify-content-center">
+          <div id="alphabetdiv">
+           <span style="--i:1">a</span>
+           <span style="--i:2">b</span>
+           <span style="--i:3">c</span>
+           <span style="--i:4">d</span>
+           <span style="--i:5">e</span>
+           <span style="--i:6">f</span>
+           <span style="--i:7">g</span>
+           <span style="--i:8">h</span>
+           <span style="--i:9">i</span>
+           <span style="--i:10">j</span>
+           <span style="--i:11">k</span>
+           <span style="--i:12">l</span>
+           <span style="--i:13">m</span>
+           <span style="--i:14">n</span>
+           <span style="--i:15">o</span>
+           <span style="--i:16">p</span>
+           <span style="--i:17">q</span>
+           <span style="--i:18">r</span>
+           <span style="--i:19">s</span>
+           <span style="--i:20">t</span>
+           <span style="--i:21">u</span>
+           <span style="--i:22">v</span>
+           <span style="--i:23">w</span>
+           <span style="--i:24">x</span>
+           <span style="--i:25">y</span>
+           <span style="--i:26">z</span>
+          </div>
+        </div>
+        <!-- The Rules Button at the top-right -->
+        <div id="rulesbuttondiv" class="is-flex is-flex-direction-column is-justify-content-center">
+          <a href="#rulesdiv">
+            <button id="rulesbutton" class="button is-black is-inverted is-outlined is-medium is-responsive">
+            <span class="icon">
+              <img src="icon.png">
+            </span>
+            <span id="readrules">Read the Rules!</span>
+            </button>
+          </a>
+        </div>
+      </header>
+    </div>
+    
+    <!-- The body of the homepage after the navbar -->
+    <div class="hero-body">
+      <div id="centerbodypictext" class="columns">
+        <div id="bodyflex" class="column container is-flex is-justify-content-space-between">
+          <img id="HangmanPic" src="https://store-images.s-microsoft.com/image/apps.31378.14440169033196048.33ec04e1-f2d4-46ed-a05b-03b332738f93.8032cfe7-683a-4be1-8b4c-9da7dc14c2b3?q=90&w=480&h=270" alt="Hangman Picture">
+          <h1 id="willyou" class="has-text-centered">Will you let him<br>suffer a horrible death &#10067;<br><br>
+            <a href="game.html">
+              <button id="startbutton" class="button is-black is-inverted is-outlined is-medium is-responsive">
+                <span id="startgame">START GAME</span>
+              </button>
+            </a>
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Rules Section of the homepage (will be unhidden if user clicks the "read the rules!" button at the top right of the homepage; if the user does not click that button, then this section will remain hidden, making the assumption that the user knows the rule already) -->  
+    <div id="rulesdiv" class="is-hidden is-flex is-flex-direction-column">
+      <h1 id="gamerules">Rules</h1>
+      <h1 class="rulestext"><span class="standout">1.</span> The computer will generate <span class="keyword">a secret word</span> for you (the user) to guess.</h1>
+      <h1 class="rulestext"><span class="standout">2.</span> An empty noose will displayed on screen, and the secret word's length will be revealed by dashes displayed on the screen.</h1>
+      <h1 class="rulestext"><span class="standout">3.</span> You (the user) will have <span class="keyword">six opportunities</span> to guess the secret word. For each guess, you are only allowed to guess one letter out of the 26 letters in the English alphabet.</h1>
+      <h1 class="rulestext"><span class="standout">4.</span> If you <span class="keyword">guess a letter</span> and it is not in the secret word, one of the Hangman's body parts is attached to the noose on screen. You are<span class="emphasis"> NOT allowed to guess the same letter</span>; if you do, then you will be alerted to guess a different letter. If you guess a letter and it is in the secret word, then it will be revealed where exactly in the secret word the letter holds a place.</h1>
+      <h1 class="rulestext"><span class="standout">5.</span> If you guess the secret word correctly <span class="keyword">before all of the Hangman's body parts are attached to the noose</span>, then you win! If not, then you lose, but you can always try again with the CPU generating a different word!</h1>
+      <h1 class="rulestext"><span class="standout">6.</span> <span class="keyword">Good luck</span> and have fun!</h1>
+    </div>
+    
+  </section>
+  
+<!-- Linking the script.js file, so our code in that file allows this webpage to include user interaction -->
+  <script src="script.js" type="text/javascript" defer></script>
+  
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+ -khtml-user-select: none;
+ -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
+}
+
+#imgbuttonlayout {
+  gap: 40px;
+}
+
+#generatebtn {
+  color: white;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+#generatebtn:hover {
+  color: black;
+}
+
+/* Lines 15-40 are responsible for overlapping the divs to make it so that the letters displayed on screen are right on top of the dashes displayed on screen */
+
+#letterondash {
+  position: relative;
+}
+
+#dashesflex {
+  position: absolute;
+  z-index: 1;
+}
+
+#lettersflex {
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  z-index: 2;
+}
+
+#reset-btn {
+  font-family: 'Fira Mono', monospace;
+}
+
+.dash {
+  font-size: 35px;
+  font-family: 'Fira Mono', monospace;
+}
+
+.alpha {
+  font-size: 35px;
+  font-family: 'Fira Mono', monospace;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
+
+html, body {
+  height: 100%;
+  width: 100%;
+  border: thin solid white;
+}
+
+header.navbar {
+  border-bottom: 1px solid white;
+}
+
+#gohomediv {
+  border-right: 1px solid white;
+  padding-left: 25px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#gohomediv:hover, #navtext:hover {
+  background-color: white;
+  transition: .5s;
+  color: black;
+}
+
+#alphabetdiv {
+  border-right: 1px solid white;
+  padding-top: 15px;
+  padding-right: 65px;
+}
+
+.navbar-end {
+  margin-inline-end: 10px;
+}
+
+#endofnavdiv {
+  margin-inline-end: 40px;
+}
+
+#inagame {
+  font-family: 'Fira Mono', monospace;
+  font-size: 22px;
+}
+
+#noose {
+  width: 500px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px white, -5px -5px 20px white;
+}
+
+#bodyflex {
+  gap: 40px;
+  padding-left: 40px;
+}
+
+#onscreenalphabet {
+  text-align: center;
+  gap: 20px;
+}
+
+#pressaletter {
+  font-size: 20px;
+  font-family: 'Fira Mono', monospace;
+}
+
+#alphabet {
+  padding-bottom: 25px;
+}
+
+.letter {
+  padding-right: 10px;
+  font-family: 'Fira Mono', monospace;
+  font-size: 30px;
+}
+
+/* Animates the "Go Back to Home" and "abcdefghijklmnopqrstuvwxyz" text in the nav bar */
+
+#navtext {
+  animation: glitch 1s linear infinite;
+  font-size: 25px;
+  font-family: 'Fira Mono', monospace;
+  letter-spacing: 3px;
+}
+
+@keyframes glitch {
+  2%,64% {
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60% {
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62% {
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+#navtext: before, #navtext: after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+#navtext: before {
+  animation: glitchTop 3s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop {
+  2%,64% {
+    transform: translate(2px,-2px);
+  }
+  4%,60% {
+    transform: translate(-2px,2px);
+  }
+  62% {
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+
+#navtext: after {
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBottom {
+  2%,64% {
+    transform: translate(-2px,0);
+  }
+  4%,60% {
+    transform: translate(-2px,0);
+  }
+  62% {
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}
+
+#flippingalphabet {
+  position: relative;
+}
+
+#flippingalphabet span {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(.1s * var(--i))
+}
+
+#reset-btn {
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 30px;
+}
+
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
