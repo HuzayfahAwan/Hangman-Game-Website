@@ -9,3 +9,5 @@ guess letters as no word will contain any other character.
   in a slightly off-looking view for the user where the user might have to zoom-in or zoom-out to find a view that is comfortable for them.
 
 - Fork the code from the provided Replit link, and then open the website in a new tab to view it.
+
+Repl Link: https://replit.com/@HuzayfahAwan/Hangman-Game-Project
