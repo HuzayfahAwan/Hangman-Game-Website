@@ -7,7 +7,3 @@ guess letters as no word will contain any other character.
 
 - This website also is optimized for use on a laptop or monitor that is sized about 24 inches. A different size or shaped screen might result
   in a slightly off-looking view for the user where the user might have to zoom-in or zoom-out to find a view that is comfortable for them.
-
-- Fork the code from the provided Repl link, and then open the website in a new tab to view it.
-
-Repl Link: https://replit.com/@HuzayfahAwan/Hangman-Game-Project
