@@ -10,7 +10,7 @@ const reset = document.querySelector("#reset-btn")
 goHome.addEventListener("click", (e) => {
   let youSure = confirm("Are you sure you want to proceed? All progress in the current game session will be lost.");
   if (youSure === true) {
-    window.location.replace("https://huzayfahawan.github.io/Mr.-Midnight-The-Logophile-Hangman-/game.html");
+    window.location.replace("https://huzayfahawan.github.io/Lexicon-Noir-The-Hangman/");
   };
 });
 
